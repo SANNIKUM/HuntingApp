@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29403.142
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AFFHA.API", "AFFHA.API\AFFHA.API.csproj", "{2D214873-1923-4F94-B34C-7A1175A48686}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5FA0BD50-B953-49F4-A357-D1413D8FA8D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AFFHA.Domain", "AFFHA.Domain\AFFHA.Domain.csproj", "{24DCCAEC-C4B5-42EE-8A11-5E796DA37F74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AFFHA.Infrastructure", "AFFHA.Infrastructure\AFFHA.Infrastructure.csproj", "{5161B8E7-94BD-43C3-ADD6-5A264BFCDEFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServicesTests", "ServicesTests", "{FF2C8CFE-6C34-4A84-835A-94A5A4E1FF7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFFHA.API.FunctionalTest", "AFFHA.API.FunctionaTest\AFFHA.API.FunctionalTest.csproj", "{BD378F12-B0B4-4E15-A2CA-754469BD4705}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D214873-1923-4F94-B34C-7A1175A48686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D214873-1923-4F94-B34C-7A1175A48686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D214873-1923-4F94-B34C-7A1175A48686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D214873-1923-4F94-B34C-7A1175A48686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24DCCAEC-C4B5-42EE-8A11-5E796DA37F74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24DCCAEC-C4B5-42EE-8A11-5E796DA37F74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24DCCAEC-C4B5-42EE-8A11-5E796DA37F74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24DCCAEC-C4B5-42EE-8A11-5E796DA37F74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5161B8E7-94BD-43C3-ADD6-5A264BFCDEFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5161B8E7-94BD-43C3-ADD6-5A264BFCDEFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5161B8E7-94BD-43C3-ADD6-5A264BFCDEFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5161B8E7-94BD-43C3-ADD6-5A264BFCDEFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD378F12-B0B4-4E15-A2CA-754469BD4705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD378F12-B0B4-4E15-A2CA-754469BD4705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD378F12-B0B4-4E15-A2CA-754469BD4705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD378F12-B0B4-4E15-A2CA-754469BD4705}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2D214873-1923-4F94-B34C-7A1175A48686} = {5FA0BD50-B953-49F4-A357-D1413D8FA8D1}
+		{24DCCAEC-C4B5-42EE-8A11-5E796DA37F74} = {5FA0BD50-B953-49F4-A357-D1413D8FA8D1}
+		{5161B8E7-94BD-43C3-ADD6-5A264BFCDEFD} = {5FA0BD50-B953-49F4-A357-D1413D8FA8D1}
+		{BD378F12-B0B4-4E15-A2CA-754469BD4705} = {FF2C8CFE-6C34-4A84-835A-94A5A4E1FF7D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C10EB4E-E3BB-46FB-9D44-0FC9E7070850}
+	EndGlobalSection
+EndGlobal

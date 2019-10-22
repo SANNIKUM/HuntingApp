@@ -1,0 +1,308 @@
+2019-10-15 14:40:35.582 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 14:41:20.188 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 14:41:47.355 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 14:42:56.545 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 14:47:25.310 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 14:57:10.626 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 14:57:11.537 +05:30 [INF] Applying migrations (AFFHA.API)...
+2019-10-15 14:57:13.331 +05:30 [WRN] Exception NullReferenceException with message Object reference not set to an instance of an object. detected on creating or migrating database
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.Infrastructure.AFFHADbContext.AddTrackingInformation() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 48
+   at AFFHA.Infrastructure.AFFHADbContext.OnBeforeSaving() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 109
+   at AFFHA.Infrastructure.AFFHADbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 102
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(CancellationToken cancellationToken)
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 33
+2019-10-15 14:57:13.414 +05:30 [FTL] An error occurred while seeding the database
+System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 38
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at AFFHA.API.Program.Main(String[] args) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Program.cs:line 46
+2019-10-15 14:57:13.415 +05:30 [INF] Starting web host (AFFHA.API)...
+2019-10-15 14:57:30.354 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: No parameterless constructor defined for type 'AFFHA.API.Application.Commands.Zones.ZoneAutoMapperProfile'.
+   at System.RuntimeType.CreateInstanceDefaultCtorSlow(Boolean publicOnly, Boolean wrapExceptions, Boolean fillCache)
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, Boolean wrapExceptions)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic, Boolean wrapExceptions)
+   at System.Activator.CreateInstance(Type type)
+   at AutoMapper.Configuration.MapperConfigurationExpression.AddProfile(Type profileType)
+   at AutoMapper.Configuration.MapperConfigurationExpression.AddMapsCore(IEnumerable`1 assembliesToScan)
+   at AutoMapper.Configuration.MapperConfigurationExpression.AddMaps(IEnumerable`1 assembliesToScan)
+   at AutoMapper.ServiceCollectionExtensions.<>c__DisplayClass11_0.<AddAutoMapperClasses>g__ConfigAction|3(IServiceProvider serviceProvider, IMapperConfigurationExpression cfg)
+   at AutoMapper.ServiceCollectionExtensions.<>c__DisplayClass11_2.<AddAutoMapperClasses>b__8(IMapperConfigurationExpression cfg)
+   at AutoMapper.MapperConfiguration.Build(Action`1 configure)
+   at AutoMapper.MapperConfiguration..ctor(Action`1 configure)
+   at AutoMapper.ServiceCollectionExtensions.<>c__DisplayClass11_0.<AddAutoMapperClasses>b__4(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at AutoMapper.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__11_5(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-10-15 14:58:24.779 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 14:58:25.687 +05:30 [INF] Applying migrations (AFFHA.API)...
+2019-10-15 14:58:27.522 +05:30 [WRN] Exception NullReferenceException with message Object reference not set to an instance of an object. detected on creating or migrating database
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.Infrastructure.AFFHADbContext.AddTrackingInformation() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 48
+   at AFFHA.Infrastructure.AFFHADbContext.OnBeforeSaving() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 109
+   at AFFHA.Infrastructure.AFFHADbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 102
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(CancellationToken cancellationToken)
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 33
+2019-10-15 14:58:27.589 +05:30 [FTL] An error occurred while seeding the database
+System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 38
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at AFFHA.API.Program.Main(String[] args) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Program.cs:line 46
+2019-10-15 14:58:27.590 +05:30 [INF] Starting web host (AFFHA.API)...
+2019-10-15 14:58:48.401 +05:30 [INF] ----- Sending command: ZonesGetAllCommand
+2019-10-15 15:01:33.834 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 15:01:34.685 +05:30 [INF] Applying migrations (AFFHA.API)...
+2019-10-15 15:01:36.364 +05:30 [WRN] Exception NullReferenceException with message Object reference not set to an instance of an object. detected on creating or migrating database
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.Infrastructure.AFFHADbContext.AddTrackingInformation() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 48
+   at AFFHA.Infrastructure.AFFHADbContext.OnBeforeSaving() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 109
+   at AFFHA.Infrastructure.AFFHADbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 102
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(CancellationToken cancellationToken)
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 33
+2019-10-15 15:01:36.438 +05:30 [FTL] An error occurred while seeding the database
+System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 38
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at AFFHA.API.Program.Main(String[] args) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Program.cs:line 46
+2019-10-15 15:01:36.440 +05:30 [INF] Starting web host (AFFHA.API)...
+2019-10-15 15:01:46.190 +05:30 [INF] ----- Sending command: ZonesGetAllCommand
+2019-10-15 15:02:11.520 +05:30 [INF] ----- Sending command: ZonesGetAllCommand
+2019-10-15 15:05:09.056 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 15:05:09.876 +05:30 [INF] Applying migrations (AFFHA.API)...
+2019-10-15 15:05:11.638 +05:30 [WRN] Exception NullReferenceException with message Object reference not set to an instance of an object. detected on creating or migrating database
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.Infrastructure.AFFHADbContext.AddTrackingInformation() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 48
+   at AFFHA.Infrastructure.AFFHADbContext.OnBeforeSaving() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 109
+   at AFFHA.Infrastructure.AFFHADbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 102
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(CancellationToken cancellationToken)
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 33
+2019-10-15 15:05:11.727 +05:30 [FTL] An error occurred while seeding the database
+System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 38
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at AFFHA.API.Program.Main(String[] args) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Program.cs:line 46
+2019-10-15 15:05:11.728 +05:30 [INF] Starting web host (AFFHA.API)...
+2019-10-15 15:05:23.126 +05:30 [INF] ----- Sending command: ZonesGetAllCommand
+2019-10-15 15:11:29.013 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 15:11:29.843 +05:30 [INF] Applying migrations (AFFHA.API)...
+2019-10-15 15:11:31.572 +05:30 [WRN] Exception NullReferenceException with message Object reference not set to an instance of an object. detected on creating or migrating database
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.Infrastructure.AFFHADbContext.AddTrackingInformation() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 48
+   at AFFHA.Infrastructure.AFFHADbContext.OnBeforeSaving() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 109
+   at AFFHA.Infrastructure.AFFHADbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 102
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(CancellationToken cancellationToken)
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 33
+2019-10-15 15:11:31.636 +05:30 [FTL] An error occurred while seeding the database
+System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 38
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at AFFHA.API.Program.Main(String[] args) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Program.cs:line 46
+2019-10-15 15:11:31.637 +05:30 [INF] Starting web host (AFFHA.API)...
+2019-10-15 15:11:41.597 +05:30 [INF] ----- Sending command: ZonesGetAllCommand
+2019-10-15 21:31:19.391 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 21:31:23.826 +05:30 [INF] Applying migrations (AFFHA.API)...
+2019-10-15 21:31:28.305 +05:30 [WRN] Exception NullReferenceException with message Object reference not set to an instance of an object. detected on creating or migrating database
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.Infrastructure.AFFHADbContext.AddTrackingInformation() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 48
+   at AFFHA.Infrastructure.AFFHADbContext.OnBeforeSaving() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 109
+   at AFFHA.Infrastructure.AFFHADbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 102
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(CancellationToken cancellationToken)
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 33
+2019-10-15 21:31:28.585 +05:30 [FTL] An error occurred while seeding the database
+System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 38
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at AFFHA.API.Program.Main(String[] args) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Program.cs:line 46
+2019-10-15 21:31:28.588 +05:30 [INF] Starting web host (AFFHA.API)...
+2019-10-15 21:38:48.660 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 21:38:50.365 +05:30 [INF] Applying migrations (AFFHA.API)...
+2019-10-15 21:38:53.407 +05:30 [WRN] Exception NullReferenceException with message Object reference not set to an instance of an object. detected on creating or migrating database
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.Infrastructure.AFFHADbContext.AddTrackingInformation() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 48
+   at AFFHA.Infrastructure.AFFHADbContext.OnBeforeSaving() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 109
+   at AFFHA.Infrastructure.AFFHADbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 102
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(CancellationToken cancellationToken)
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 33
+2019-10-15 21:38:53.560 +05:30 [FTL] An error occurred while seeding the database
+System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 38
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at AFFHA.API.Program.Main(String[] args) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Program.cs:line 46
+2019-10-15 21:38:53.562 +05:30 [INF] Starting web host (AFFHA.API)...
+2019-10-15 21:44:01.157 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 21:44:02.811 +05:30 [INF] Applying migrations (AFFHA.API)...
+2019-10-15 21:44:05.840 +05:30 [WRN] Exception NullReferenceException with message Object reference not set to an instance of an object. detected on creating or migrating database
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.Infrastructure.AFFHADbContext.AddTrackingInformation() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 48
+   at AFFHA.Infrastructure.AFFHADbContext.OnBeforeSaving() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 109
+   at AFFHA.Infrastructure.AFFHADbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 102
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(CancellationToken cancellationToken)
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 33
+2019-10-15 21:44:05.985 +05:30 [FTL] An error occurred while seeding the database
+System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 38
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at AFFHA.API.Program.Main(String[] args) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Program.cs:line 46
+2019-10-15 21:44:05.988 +05:30 [INF] Starting web host (AFFHA.API)...
+2019-10-15 21:45:32.739 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 21:45:34.102 +05:30 [INF] Applying migrations (AFFHA.API)...
+2019-10-15 21:45:37.033 +05:30 [WRN] Exception NullReferenceException with message Object reference not set to an instance of an object. detected on creating or migrating database
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.Infrastructure.AFFHADbContext.AddTrackingInformation() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 48
+   at AFFHA.Infrastructure.AFFHADbContext.OnBeforeSaving() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 109
+   at AFFHA.Infrastructure.AFFHADbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 102
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(CancellationToken cancellationToken)
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 33
+2019-10-15 21:45:37.168 +05:30 [FTL] An error occurred while seeding the database
+System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 38
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at AFFHA.API.Program.Main(String[] args) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Program.cs:line 46
+2019-10-15 21:45:37.170 +05:30 [INF] Starting web host (AFFHA.API)...
+2019-10-15 21:53:34.227 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 21:53:35.811 +05:30 [INF] Applying migrations (AFFHA.API)...
+2019-10-15 21:53:38.820 +05:30 [WRN] Exception NullReferenceException with message Object reference not set to an instance of an object. detected on creating or migrating database
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.Infrastructure.AFFHADbContext.AddTrackingInformation() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 48
+   at AFFHA.Infrastructure.AFFHADbContext.OnBeforeSaving() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 109
+   at AFFHA.Infrastructure.AFFHADbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 102
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(CancellationToken cancellationToken)
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 33
+2019-10-15 21:53:38.964 +05:30 [FTL] An error occurred while seeding the database
+System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 38
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at AFFHA.API.Program.Main(String[] args) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Program.cs:line 46
+2019-10-15 21:53:38.966 +05:30 [INF] Starting web host (AFFHA.API)...
+2019-10-15 21:54:27.340 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 21:54:28.776 +05:30 [INF] Applying migrations (AFFHA.API)...
+2019-10-15 21:54:31.528 +05:30 [WRN] Exception NullReferenceException with message Object reference not set to an instance of an object. detected on creating or migrating database
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.Infrastructure.AFFHADbContext.AddTrackingInformation() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 48
+   at AFFHA.Infrastructure.AFFHADbContext.OnBeforeSaving() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 109
+   at AFFHA.Infrastructure.AFFHADbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 102
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(CancellationToken cancellationToken)
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 33
+2019-10-15 21:54:31.674 +05:30 [FTL] An error occurred while seeding the database
+System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 38
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at AFFHA.API.Program.Main(String[] args) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Program.cs:line 46
+2019-10-15 21:54:31.676 +05:30 [INF] Starting web host (AFFHA.API)...
+2019-10-15 21:57:32.967 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 21:57:34.511 +05:30 [INF] Applying migrations (AFFHA.API)...
+2019-10-15 21:57:37.595 +05:30 [WRN] Exception NullReferenceException with message Object reference not set to an instance of an object. detected on creating or migrating database
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.Infrastructure.AFFHADbContext.AddTrackingInformation() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 48
+   at AFFHA.Infrastructure.AFFHADbContext.OnBeforeSaving() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 109
+   at AFFHA.Infrastructure.AFFHADbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 102
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(CancellationToken cancellationToken)
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 33
+2019-10-15 21:57:37.732 +05:30 [FTL] An error occurred while seeding the database
+System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 38
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at AFFHA.API.Program.Main(String[] args) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Program.cs:line 46
+2019-10-15 21:57:37.734 +05:30 [INF] Starting web host (AFFHA.API)...
+2019-10-15 21:59:00.246 +05:30 [INF] Configuring web host (AFFHA.API)...
+2019-10-15 21:59:01.845 +05:30 [INF] Applying migrations (AFFHA.API)...
+2019-10-15 21:59:04.854 +05:30 [WRN] Exception NullReferenceException with message Object reference not set to an instance of an object. detected on creating or migrating database
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.Infrastructure.AFFHADbContext.AddTrackingInformation() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 48
+   at AFFHA.Infrastructure.AFFHADbContext.OnBeforeSaving() in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 109
+   at AFFHA.Infrastructure.AFFHADbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.Infrastructure\AFFHADbContext.cs:line 102
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(CancellationToken cancellationToken)
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 33
+2019-10-15 21:59:05.000 +05:30 [FTL] An error occurred while seeding the database
+System.AggregateException: One or more errors occurred. (Object reference not set to an instance of an object.)
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at AFFHA.API.Infrastructure.DatabaseSeed.AFFHADatabaseSeed.SeedAsync(AFFHADbContext context, IOptions`1 settings, ILogger`1 logger) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Infrastructure\DatabaseSeed\AFFHADatabaseSeed.cs:line 38
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at AFFHA.API.Program.Main(String[] args) in C:\Sanni PC\OB\HuntingAPI\Boilerplate\AFFHA.API\AFFHA.API\Program.cs:line 46
+2019-10-15 21:59:05.002 +05:30 [INF] Starting web host (AFFHA.API)...
